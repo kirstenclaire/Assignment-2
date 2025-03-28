@@ -27,6 +27,9 @@ uvicorn api.api:app --reload
 ```
 curl -X GET "https://bankruptcy-api-107996658465.us-central1.run.app/"
 ```
+```
+http://127.0.0.1:8000/docs
+```
 # Deployment Instructions
 # Build & Push Docker Image
 ```bash
@@ -60,4 +63,4 @@ python scripts/train.py
 - AUC-ROC: 0.95
 - Response Time: ~54ms
 - Memory Usage: <512MB
-http://127.0.0.1:8000/docs
+
