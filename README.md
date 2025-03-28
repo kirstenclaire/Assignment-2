@@ -60,3 +60,4 @@ python scripts/train.py
 - AUC-ROC: 0.95
 - Response Time: ~54ms
 - Memory Usage: <512MB
+http://127.0.0.1:8000/docs
