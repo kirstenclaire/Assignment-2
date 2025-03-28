@@ -9,14 +9,19 @@ model.load_model("models/model.json")
 
 scaler = joblib.load("models/scaler.pkl")
 
-app = FastAPI(title="Bankruptcy Prediction API")
+app = FastAPI(title="Prediction API")
 
 class Features(BaseModel):
     feature_values: list[float]
 
+@app.get("/")
+def home():
+    return {"message": "Bankruptcy Prediction API"}
+
 @app.post("/predict")
 def predict_bankruptcy(data: Features):
     try:
+
         input_data = np.array(data.feature_values).reshape(1, -1)
 
         expected_features = scaler.n_features_in_
